@@ -1,0 +1,96 @@
+.app {
+  background-color: black;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.panel {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 30px; */
+  width: 100%;
+  transition: .3s ease-in-out;
+}
+
+.panelHidden {
+  composes: panel;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  border: none;
+  font-size: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: .5s linear;
+  background-color: transparent;
+  animation: buttonClick 1s ease-in-out alternate infinite;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.buttonAnimated {
+  composes: button;
+  animation: buttonClick 1s ease-in-out alternate;
+}
+
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.buttonRed {
+  composes: button;
+  color: red;
+  border: 2px solid red;
+  text-shadow: 0px 0px 10px rgb(252, 94, 94);
+  box-shadow: 0px 0px 5px 1px rgb(254, 36, 36);
+  background-color: rgba(254, 36, 36, .2);
+}
+
+.buttonBlue {
+  composes: button;
+  color: rgb(34, 103, 253);
+  border: 2px solid blue;
+  text-shadow: 0px 0px 10px rgb(0, 12, 248);
+  box-shadow: 0px 0px 5px 1px rgb(0, 12, 248);
+  background-color: rgba(0, 12, 248, .2);
+
+}
+
+.buttonGreen {
+  composes: button;
+  color: #00ff2b;
+  border: 2px solid #00ff2b;
+  text-shadow: rgb(0, 255, 43) 0 0 10px;
+  box-shadow: #00ff2b 0 0 5px 1px;
+  background-color: rgba(0, 255, 43, .2);
+
+}

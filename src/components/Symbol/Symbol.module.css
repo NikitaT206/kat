@@ -1,0 +1,180 @@
+.symbolActive {
+  color: #00ff2b;
+  font-size: 50px;
+  min-width: 30px;
+  max-width: 30px;
+  min-height: 35px;
+  max-height: 35px;
+  text-align: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  text-shadow: 0px 0px 10px rgb(229, 255, 230);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redActive {
+  font-size: 50px;
+  min-width: 30px;
+  max-width: 30px;
+  min-height: 35px;
+  max-height: 35px;
+  text-align: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  text-shadow: 0px 0px 10px rgb(252, 94, 94);
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blueActive {
+  font-size: 50px;
+  min-width: 30px;
+  max-width: 30px;
+
+  min-height: 35px;
+  max-height: 35px;
+  text-align: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  text-shadow: 0px 0px 15px rgb(0, 12, 248);
+  color: rgb(34, 103, 253);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.symbol {
+  comsposes: symbolActive;
+  color: #009a22;
+  font-size: 50px;
+  min-width: 30px;
+  max-width: 30px;
+
+  min-height: 35px;
+  max-height: 35px;
+  text-align: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: .1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  composes: redActive;
+  font-size: 50px;
+  min-width: 30px;
+  max-width: 30px;
+
+  min-height: 35px;
+  max-height: 35px;
+  text-align: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: .1s ease-in-out;
+  text-shadow: none;
+  color: rgb(172, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue {
+  composes: blueActive;
+  font-size: 50px;
+  min-width: 30px;
+  max-width: 30px;
+  min-height: 35px;
+  max-height: 35px;
+  text-align: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: .1s ease-in-out;
+  color: rgb(18, 18, 126);
+  text-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.simbolHidden {
+  composes: symbol;
+  transition: 1s linear;
+  opacity: 0;
+  visibility: hidden;
+  text-shadow: none;
+}
+
+.redHidden {
+  composes: red;
+  transition: 1s linear;
+  opacity: 0;
+  visibility: hidden;
+  text-shadow: none;
+}
+
+.blueHidden {
+  composes: blue;
+  transition: 1s linear;
+  opacity: 0;
+  visibility: hidden;
+  text-shadow: none;
+}
+
+@media screen and (max-width: 500px) {
+  .symbolActive {
+    font-size: 40px;
+    min-width: 20px;
+  max-width: 20px;
+
+    min-height: 25px;
+  }
+
+  .symbol {
+  max-width: 20px;
+
+    font-size: 40px;
+    min-width: 20px;
+    min-height: 25px;
+  }
+
+  .redActive {
+  max-width: 20px;
+
+    font-size: 40px;
+    min-width: 20px;
+    min-height: 25px;
+  }
+
+  .blueActive {
+  max-width: 20px;
+
+    font-size: 40px;
+    min-width: 20px;
+    min-height: 25px;
+  }
+
+  .blue {
+    font-size: 40px;
+    min-width: 20px;
+    min-height: 25px;
+  max-width: 20px;
+
+  }
+
+  .red {
+    font-size: 40px;
+    min-width: 20px;
+    min-height: 25px;
+  max-width: 20px;
+
+  }
+}
